@@ -1,3 +1,6 @@
 baseURL = "https://abuob.github.io/"
 languageCode = "en-us"
 title = "abuob.github.io"
+
+[permalinks]
+    blog = "/:filename/"
