@@ -2,14 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ .Title}}</title>
-        {{ $css := "css/styles.css" | relURL }}
-        <link rel="stylesheet" href="{{ $css }}" />
-        <link rel="icon" href="data:," />
+        {{ $styles := resources.Get "css/styles.css" | fingerprint }}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+        <link rel="icon" href="/images/andreas-buob.jpg" />
     </head>
     <body>
         <aside>
-            <div class="image-placeholder"></div>
+            <figure class="author-image-container">
+                <img class="author-image" src="/images/andreas-buob.jpg" alt="Andreas Buob" />
+                <figcaption class="author-name">Andreas Buob</figcaption>
+            </figure>
             <nav>
                 <ul>
                     <li>
