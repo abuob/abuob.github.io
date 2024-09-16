@@ -12,6 +12,10 @@ main {
     max-width: 700px;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 article {
     line-height: 1.5;
 }
@@ -28,8 +32,6 @@ aside {
 }
 
 .author-image {
-    width: 150px;
-    height: 150px;
     border-radius: 50%;
 }
 

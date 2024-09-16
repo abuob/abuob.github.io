@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Andreas Buob, Software Engineer in Bern, Switzerland." />
         <title>{{ .Title}}</title>
         {{ $styles := resources.Get "css/styles.css" | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
@@ -11,7 +12,7 @@
     <body>
         <aside>
             <figure class="author-image-container">
-                <img class="author-image" src="/images/andreas-buob.jpg" alt="Andreas Buob" />
+                <img class="author-image" src="/images/andreas-buob.jpg" alt="Andreas Buob" height="150" width="150" />
                 <figcaption class="author-name">Andreas Buob</figcaption>
             </figure>
             <nav>

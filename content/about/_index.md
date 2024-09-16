@@ -8,7 +8,7 @@ layout: page
 
 Hello there 👋
 
-My name is Andreas Buob. I live near Bern, Switzerland, and write software for a living. I'm currently employed by Swisscom.
+My name is Andreas Buob. I live in Bern, Switzerland, and write software for a living. I'm currently employed by Swisscom.
 
 My technical interests are primarily focussed around frontends and their architecture, especially in the context of monorepositories:
 
