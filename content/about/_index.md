@@ -16,7 +16,7 @@ My technical interests are primarily focussed around frontends and their archite
 -   Unify dev-experience across multiple projects, to allow for seamless transfer of dev-resources
 -   Strong focus on observability: Designing systems that achieve a high degree of observability out of the box
 
-My interest in monorepositories led me to create [yanice](https://github.com/abuob/yanice), a tool which allows for orchestrating
+My interest in monorepositories led me to create [yanice](https://github.com/abuob/yanice) (_yet another incremental command executor_), a tool which allows for orchestrating
 command-execution across multiple projects based on changed files (comparing a git revision with the working tree).
 It furthermore allows to enforce boundaries between the projects.
 Unlike many of the existing monorepo-tooling out there which follow an opinionated "zero-config"-approach, yanice aims to be "all-config",
