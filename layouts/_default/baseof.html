@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Andreas Buob, Software Engineer in Bern, Switzerland." />
-        <title>{{ .Title}}</title>
+        <title>{{ .Title }}</title>
         {{ $styles := resources.Get "css/styles.css" | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
         <link rel="icon" href="/images/andreas-buob.jpg" />
@@ -33,7 +33,7 @@
             </nav>
         </aside>
         <main>
-            <article>{{ block "main" . }} {{ end }}</article>
+            <article>{{ block "main" . }}{{ end }}</article>
         </main>
     </body>
 </html>

@@ -5,14 +5,13 @@ tags: []
 draft: false
 ---
 
-# Why have a website?
-
 This is a question I've asked myself a while already.
 So far throughout my life, I've found the anonymity of the internet rather comforting.
 Why should anyone be able to connect my name to what I write online? Or look up who I am?
 
 For the most part, I still believe that it's better to just stay anonymous.
-However, a website allows me to put online what I want, under my own terms - which fits my needs perfectly.
+However, as outlined below, there are some benefits of using one's own real name - and a website allows me to do
+that exactly the way I want, under my own terms.
 
 ## No social media
 
@@ -20,8 +19,8 @@ I try to avoid social media as much as I can, especially if they rely on an ad-b
 Hordes of engineers optimizing algorithms to keep eyeballs glued to the screen as much as possible - and just as many data engineers trying to squeeze out
 every last bit of harvestable data to sell to the highest bidder: No thanks, I'd rather do without.
 
-Unfortunately, this also means that I'm essentially completely "unsearchable" - if anyone happens to search for me,
-they're likely to find nothing, or worse, find someone with the same name and mistaking them for me (which has already happened in the past).
+Unfortunately, this also means that I'm essentially completely "unsearchable" - if anyone happens to search for me on the internet,
+they're likely to find nothing, or worse, find someone with the same name and mistake them for me (which has already happened in the past).
 
 A website at least makes me findable on the internet, while only providing data to the harvesters that I consciously allow them to have.
 
@@ -29,7 +28,8 @@ A website at least makes me findable on the internet, while only providing data 
 
 I do have opinions and thoughts on many things - writing them down helps to flesh them out and forces me to reflect on my own views.
 If they're put out online, they'd better be thought through properly; after all, they're public now.
-And if anyone happens to stumble upon them and might find them useful - all the better!
+Primarily, I'm of course writing for myself - frankly speaking I'd be surprised if anyone else bothered to read anything I write.
+However, if anyone happens to stumble upon it and finds it useful - all the better!
 
 ## So, here we go!
 
