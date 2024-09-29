@@ -3,8 +3,8 @@
         <h1>
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h1>
-        {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-        {{ $dateFormat := .Site.Params.dateFormat | default "January 1, 2006" }}
-        <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+        {{ $dateTimeIso := .Date.Format "2006-01-02" }}
+        {{ $dateTimeHuman := .Date.Format "January 2, 2006" }}
+        <time datetime="{{ $dateTimeIso }}">{{ $dateTimeHuman }}</time>
     {{ end }}
 {{ end }}
