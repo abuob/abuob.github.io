@@ -1,11 +1,7 @@
 ---
 title: Contact
 url: /contact
-layout: page
+layout: contact
 ---
 
-# Contact
-
-You can reach me via email: firstname dot lastname at protonmail dot com.
-
-My github account: https://github.com/abuob/
+I can also be found on [GitHub](https://github.com/abuob).

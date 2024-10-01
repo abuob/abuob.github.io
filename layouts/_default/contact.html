@@ -1,0 +1,7 @@
+{{ define "main" }}
+    <h1>Contact</h1>
+    <span>Feel free to get in touch via email:</span>
+    {{ $emailSvg := resources.Get "svg/email.svg" | fingerprint }}
+    <object class="svg-email-protection" data="{{ $emailSvg.RelPermalink }}" type="image/svg+xml"></object>
+    {{ .Content }}
+{{ end }}

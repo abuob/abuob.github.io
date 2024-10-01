@@ -39,6 +39,11 @@ aside {
     padding: 10px;
 }
 
+.svg-email-protection {
+    width: 200px;
+    vertical-align: middle;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
