@@ -8,6 +8,7 @@
         {{ $styles := resources.Get "css/styles.css" | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
         <link rel="icon" href="/images/andreas-buob.jpg" />
+        <link rel="alternate" type="application/rss+xml" href="/blog/index.xml" title="Andreas Buob" />
     </head>
     <body>
         <aside>
