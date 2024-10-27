@@ -29,13 +29,15 @@ especially if this work, as is often the case in enterprise-projects I've seen s
 In a monorepository, such a process is obsolete: If one touches a library within the monorepository, every project consuming that library can directly run its test against it,
 catching breaking changes in the same pull-request, ensuring that no change can be made without passing existing tests.
 
+## Consistency across projects
+
 Furthermore, it is much easier to enforce consistency across different projects: Establishing patterns, linting rules, project-crossing tests and general dev-experience consistency is much easier
 to achieve when everything is in a single place. It also forces all the different participants to talk with each other:
 Instead of everyone having their own little garden (separate repository) where they can do whatever they want, there's visibility and accountability towards everyone in the monorepository.
 Even just knowing who works on which part of the monorepository and getting frequently exposed to their work can help a lot to bridge organizational gaps between devs,
 making it easier to collaborate across teams and other organizational units.
 
-# The price one pays
+## The price one pays
 
 Monorepositories are no silver bullet. There's a hefty price to be paid; it brings a lot of challenges with it.
 If they are not properly addressed, it will cause a lot of friction for the involved developers, and will generally be a worse situation than a multi-repository-setup.
@@ -46,6 +48,8 @@ we really only run the tests that need to be run.
 
 The same is true for local tooling: Developers require utility-scripts which allow them to only format, lint and test "their" changes,
 rather than running everything locally every time they touch something.
+
+## Higher floor, higher ceiling
 
 These challenges must not be underestimated: Having a big monorepository with a bad developer experience is a terrible situation to be in.
 Devs will start to loath the long build pipelines and will look for easy solutions to improve the situation ("let's make some checks optional!"),
