@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{ range .Pages.ByPublishDate.Reverse }}
-        <h1>
+        <h1 class="list-page--item-title">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h1>
         {{ $dateTimeIso := .Date.Format "2006-01-02" }}

@@ -55,3 +55,7 @@ nav ul {
     justify-content: center;
     gap: 20px;
 }
+
+.list-page--item-title {
+    margin-bottom: 0;
+}

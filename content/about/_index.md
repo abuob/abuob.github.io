@@ -26,7 +26,8 @@ For those who care about these things, I hold a BSc in Computer Science by ethz.
 
 # About this website
 
-It's just a little static website generated using [hugo](https://gohugo.io/), hosted on [GitHub pages](https://pages.github.com/).
+If you're wondering why I have a website to begin with, I've outlined my reasons [here]({{< relref "/blog/2024-09-10-why-have-a-website.md" >}}).
+From a technical point of view, it's just a little static website generated using [hugo](https://gohugo.io/), hosted on [GitHub pages](https://pages.github.com/).
 The source code can be found [here](https://github.com/abuob/abuob.github.io).
 Though I'm involved in quite a bit of frontend-programming at my day job, I'm obviously terrible at design,
 please forgive me for the rather rudimentary layout.
