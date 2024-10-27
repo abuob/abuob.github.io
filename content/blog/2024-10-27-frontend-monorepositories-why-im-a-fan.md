@@ -7,10 +7,10 @@ slug: 'frontend-monorepositories-why-im-a-fan'
 ---
 
 When I started to work professionally on a bigger frontend project for the first time, I joined a multi-repository-setup:
-There was "our" main repository and then several library-repositories, which published npm-packages that our main-repository depended upon.
+There was our main repository and then several library-repositories, which published npm-packages that our main-repository depended upon.
 
 The libraries were relatively simple: Small setup, fast builds and on their own relatively easy to deal with.
-The pain was întegrating them back into our main repository: It required multiple pull-requests across different repositories,
+The pain was integrating them back into our main repository: It required multiple pull-requests across different repositories,
 and forced us in some cases to fix breaking changes caused by someone else who made a change but did not update the version in our main repository, delegating that work to whoever had to update next.
 
 I was rather unhappy with that particular situation and ultimately combined all the different projects into a single monorepository.
@@ -44,18 +44,23 @@ If they are not properly addressed, it will cause a lot of friction for the invo
 
 The most obvious price is pipeline performance: As all projects are in the same place and as we decidedly want to make sure any change does not break any single project, all tests that are impacted
 by any given change must be run. This can be very resource intensive, and brings challenges like having some form of "change-detection" in the pipeline to ensure
-we really only run the tests that need to be run.
+we really only run the tests that need to be run (to address this particular challenge, I've built the aforementioned [yanice](https://github.com/abuob/yanice)).
 
 The same is true for local tooling: Developers require utility-scripts which allow them to only format, lint and test "their" changes,
 rather than running everything locally every time they touch something.
 
+Another challenge is what I call "premature DRY": Now that we can share code very easily across projects, we're inclined to do this a bit too much.
+It is vital to shape the dependency-graph between the different projects so that the "hot paths" (parts which are touched often) aren't relied on by too many at the same time.
+Libraries that include names like "common", "shared", "core" etc. are very tempting but, as I had to learn the hard way over multiple attempts, tend to grow too uncontrolled
+and make proper change-detection for efficient pipelines essentially impossible.
+
 ## Higher floor, higher ceiling
 
 These challenges must not be underestimated: Having a big monorepository with a bad developer experience is a terrible situation to be in.
-Devs will start to loath the long build pipelines and will look for easy solutions to improve the situation ("let's make some checks optional!"),
-and if it takes too much time to run tests (or any other checks) locally, simply try to work with tests as little as possible.
-This in turn leads to bad test coverage, which in turn leads to a worse experience as people start to break each other's projects, which will lead to friction between teams
-("their bad code is hurting us"), and so on. It's a vicious cycle that must be avoided at all costs.
+Devs will start to loath the long build pipelines and some will look for easy solutions to improve the situation ("let's make some checks optional!"),
+and if it takes too much time to run tests (or any other checks) locally, will simply try to avoid or work around them as much as they get away with.
+This leads to bad test coverage, which then leads to people starting to break each other's projects, which in turn will lead to friction between teams, and so on.
+It's a vicious cycle that must be avoided at all costs.
 
 To sum it up: If the challenges are not properly addressed, a multi-repository-setup is probably preferable,
 because there it's at least easy to assign responsibilities and keep the build-process relatively simple and cheap, at the cost of process overhead.
