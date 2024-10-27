@@ -3,4 +3,4 @@ languageCode = "en-us"
 title = "Andreas Buob"
 
 [permalinks]
-    blog = "/:filename/"
+    blog = "/blog/:slug/"

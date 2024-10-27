@@ -3,6 +3,7 @@ title: 'Software Development is always a Team Effort: Using the collective "we"'
 date: 2024-09-29T20:17:17+02:00
 tags: []
 draft: false
+slug: 'the-collective-we'
 ---
 
 In an enterprise environment, software is often written by dozens of developers, distributed over multiple teams.

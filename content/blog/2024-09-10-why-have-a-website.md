@@ -3,6 +3,7 @@ title: 'Why have a website?'
 date: 2024-09-10T23:55:41+02:00
 tags: []
 draft: false
+slug: 'why-have-a-website'
 ---
 
 This is a question I've asked myself a while already.
