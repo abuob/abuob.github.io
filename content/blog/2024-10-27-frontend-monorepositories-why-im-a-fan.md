@@ -3,7 +3,7 @@ title: "Frontend Monorepositories: Why I'm a fan"
 date: 2024-10-27T10:06:56+02:00
 tags: []
 draft: false
-slug: 'frontend-monorepositories-why-im-a-fan.md'
+slug: 'frontend-monorepositories-why-im-a-fan'
 ---
 
 When I started to work professionally on a bigger frontend project for the first time, I joined a multi-repository-setup:
