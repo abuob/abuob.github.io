@@ -11,7 +11,7 @@ There was "our" main repository and then several library-repositories, which pub
 
 The libraries were relatively simple: Small setup, fast builds and on their own relatively easy to deal with.
 The pain was întegrating them back into our main repository: It required multiple pull-requests across different repositories,
-and forced us in some cases to fix breaking changes caused by someone else who made a change but did update the version in our main repository, delegating that work to whoever had to update next.
+and forced us in some cases to fix breaking changes caused by someone else who made a change but did not update the version in our main repository, delegating that work to whoever had to update next.
 
 I was rather unhappy with that particular situation and ultimately combined all the different projects into a single monorepository.
 Since then, I've worked on multiple projects with a monorepository-setup, have written tooling for them (e.g. [yanice](https://github.com/abuob/yanice)) and administered their technical setup,
@@ -21,9 +21,9 @@ and have become incredibly fond of them. As elaborated below, they provide an ar
 
 In a multi-repository-setup, a lot of organizational process is required to ensure the moving parts aren't breaking each other.
 For example: If we open a pull-request for a library, how can we know that it doesn't break a consumer?
-Consumers must be either mandated to use some from of Contract Tests, which I find often rather impractical in the frontend-space, or alternatively,
-that whoever changes the library is mandated to ensure it doesn't break any consumer (which often involves a lot of manual overhead, like testing library-release-candidates and whatnot).
-All of this is rather hard to enforce, and "quick changes" to one library can cause a lot of work to integrate back into a consumer -
+Consumers must either be mandated to use some form of Contract Tests, which I find often rather impractical in the frontend-space, or alternatively,
+that whoever changes the library is mandated to ensure it doesn't break any consumer, which in turn often involves a lot of manual overhead, like testing library-release-candidates and whatnot.
+All of this is rather hard to enforce, and "quick changes" to one library can cause a lot of work downstream -
 especially if this work, as is often the case in enterprise-projects I've seen so far, is delegated to whichever poor sod is next required to update library-versions.
 
 In a monorepository, such a process is obsolete: If one touches a library within the monorepository, every project consuming that library can directly run its test against it,
@@ -42,7 +42,7 @@ If they are not properly addressed, it will cause a lot of friction for the invo
 
 The most obvious price is pipeline performance: As all projects are in the same place and as we decidedly want to make sure any change does not break any single project, all tests that are impacted
 by any given change must be run. This can be very resource intensive, and brings challenges like having some form of "change-detection" in the pipeline to ensure
-we really only run the tests that are required to be run for a given changeset.
+we really only run the tests that need to be run.
 
 The same is true for local tooling: Developers require utility-scripts which allow them to only format, lint and test "their" changes,
 rather than running everything locally every time they touch something.
