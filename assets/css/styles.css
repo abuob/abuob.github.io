@@ -59,3 +59,27 @@ nav ul {
 .list-page--item-title {
     margin-bottom: 0;
 }
+
+article figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article figure img {
+    margin: 0;
+    object-fit: scale-down;
+    max-width: 100%;
+}
+
+article figcaption p {
+    margin: 0 20px;
+    text-align: center;
+    font-size: small;
+}
+
+article div.highlight pre {
+    overflow: auto;
+    padding: 8px;
+}

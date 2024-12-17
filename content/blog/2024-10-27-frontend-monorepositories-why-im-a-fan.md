@@ -13,7 +13,7 @@ The libraries were relatively simple: Small setup, fast builds and on their own 
 The pain was integrating them back into our main repository: It required multiple pull-requests across different repositories,
 and forced us in some cases to fix breaking changes caused by someone else who made a change but did not update the version in our main repository, delegating that work to whoever had to update next.
 
-I was rather unhappy with that particular situation and ultimately combined all the different projects into a single monorepository.
+We were rather unhappy with that particular situation and ultimately combined all the different projects into a single monorepository.
 Since then, I've worked on multiple projects with a monorepository-setup, have written tooling for them (e.g. [yanice](https://github.com/abuob/yanice)) and administered their technical setup,
 and have become incredibly fond of them. As elaborated below, they provide an array of benefits but also impose a lot of difficult challenges which one must solve, which I happen to love doing.
 
