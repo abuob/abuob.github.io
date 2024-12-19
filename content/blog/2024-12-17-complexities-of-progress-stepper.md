@@ -16,8 +16,8 @@ As I had to learn the hard way, there are quite a few things to trip over.
 
 ## Are they really complex?
 
-Well... yes and no. It really depends on your exact requirements. If, for example, the exact steps are already known in advance, are completely static,
-don't ever change and do not have to be dynamic in any way, then yes, they're rather simple to implement.
+Well... yes and no. It really depends on your exact requirements. If, for example, the exact steps are already known in advance, are either completely static
+or require only very little dynamic support, then yes, they're rather simple to implement.
 
 However, there are plenty of scenarios and requirements that can make them fairly complex rather quickly:
 
@@ -46,10 +46,11 @@ The biggest and most important one is probably: Be open and ready for new requir
 Unless it is set in stone that a flow won't ever change and it is agreed with all stakeholders that we specifically
 implement _just this exact flow and nothing else_, prepare that sooner or later, there will be new requirements.
 
-This sounds fairly obvious, but I've seen too many projects (including some that I was part of) already ending up in a tight spot
-because shortcuts were taken early on to deliver some minimal product on a tight deadline.
-Another issue is that on the surface, it often really _does look_ simple, so developers are tempted
-to just use some imperative coding without any abstraction. This often falls flat however outside of happy paths due to tight, rigid
+This sounds fairly obvious, but I've seen too many projects already (including some that I was part of) ending up in a tight spot
+because too many assumptions of what a stepper should and should not support were made early on, often to enable delivering some minimal
+viable product on a tight deadline that was a greatly simplified version of what should be possible later on.
+Another issue is that on the surface, it often really _does look simple_, so developers are tempted
+to just use some imperative coding without any abstraction. This often falls flat once we have to make things more dynamic due to tight, rigid
 coupling between the steps and the stepper.
 
 ### Abstract towards declarative, configuration-based approaches
@@ -84,7 +85,7 @@ const stepConfiguration: Record<stepIdentifier, StepConfiguration> = {
     'step-A': {
         someLabel: 'Step A',
         isShown: isStepAShown,
-        onEnter: onEnterStepA,
+        onEnter: onEnterStepA, // this could be an async function, a promise, an rxjs-subject, etc.
         onLeave: onLeaveStepA
     }
 };
@@ -93,20 +94,26 @@ const stepConfiguration: Record<stepIdentifier, StepConfiguration> = {
 The primary motivation of such a configuration is really to decouple implementation from "declaration of intent".
 This allows for much easier refactoring and implementation of new requirements.
 
-The configuration above is relatively simple - and fairly close to an early iteration I've once worked on.
-It does have a few shortcomings though. A few considerations:
+You might wonder, why do we have some "onEnter/onLeave"-hooks directly on the configuration? Why not let the steps themselves handle whatever they need?
+When transitioning between the steps, we need to be able to give some temporal guarantees.
+For example, when we go from 'step-A' to 'step-B', 'onLeave' of 'step-A' must be finished before 'onEnter' of 'step-B' is started,
+as there might be a data-dependency. 'step-B' however should in no way be aware of 'step-A', hence, if we want to keep the steps independent,
+we need to find an abstraction which gives us these guarantees.
 
+The configuration above is relatively simple - and fairly close to an early iteration I've once worked on.
+A few considerations:
+
+-   As per the above, the onEnter/onLeave operations have to be called in the correct order; they need to appropriately wait for each other
+    as there might be a data-dependency.
 -   When going from 'step-A' to 'step-B', it could be a UX requirement that we show a transparent spinner on top of 'step-A',
     and only ever transition to 'step-B' when that step is entirely ready. Meaning: When we move away from 'step-A', we call 'onLeave',
     then we call 'onEnter' of 'step-B', and only once that is complete, we actually transition.
--   The onEnter/onLeave operations have to be called in the correct order; they need to appropriately wait for each other
-    as there might be a data-dependency.
 -   During 'onEnter' of 'step-B', it could become clear that 'step-B' isn't actually needed. If we need to support this case,
-    we need to recursively trigger the 'onEnter' of the next step. We likely need to invoke the "isShown"-method multiple times
-    in order to account for this.
+    we need to recursively trigger the 'onEnter' of the next step. We likely need to check for "isShown" multiple times to account for this scenario.
 -   It might be useful to have a "onSkip"-hook for a step. Meaning: If "isShown" says that the step isn't needed, we might still
     want to trigger some step-specific calls which might be required regardless (the step not being shown is just a UI-thing, after all).
     This can help keeping a step "atomic", meaning, we don't have to take care of doing some calls elsewhere, which helps with keeping the steps composable.
+    It will, however, increase complexity by quite a bit if we want to have temporal guarantees in which order these hooks are executed.
 -   The stepper needs to start somewhere. Usually the first visible step - but maybe for some requirement, someone wants to start at the second step, for whatever reason.
     Browser-history obviously won't lead back to the first step but the user might still be able to navigate to that step via UI-interaction.
 

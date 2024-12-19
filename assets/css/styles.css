@@ -71,6 +71,7 @@ article figure img {
     margin: 0;
     object-fit: scale-down;
     max-width: 100%;
+    height: 100%;
 }
 
 article figcaption p {
