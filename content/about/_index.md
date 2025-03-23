@@ -6,9 +6,11 @@ layout: page
 
 # About Me
 
-Hello there 👋
+Hi, thanks for stopping by! 👋
 
 My name is Andreas Buob. I live in Bern, Switzerland, and write software for a living. I'm currently employed by Swisscom.
+
+## Technical interests
 
 My technical interests are primarily focussed around frontends and their architecture, especially in the context of monorepositories:
 
@@ -22,7 +24,15 @@ It furthermore allows to enforce boundaries between the projects.
 Unlike many of the existing monorepo-tooling out there which follow an opinionated "zero-config"-approach, yanice aims to be "all-config",
 where everything has to be configured and described, rather than relying on automatic inference.
 
-For those who care about these things, I hold a BSc in Computer Science by ethz.
+## Personal
+
+* I'm fond of bullet lists
+* Originally from the eastern parts of Switzerland (near St. Gallen)
+* BSc in Computer Science from ethz
+* Have an interest for languages; currently trying to improve my French
+* [Letterboxd](https://letterboxd.com/) enthusiast
+* More fond of video games than I care to admit
+* Love the Bernese region with the Aare and the incredible mountain views
 
 # About this website
 
