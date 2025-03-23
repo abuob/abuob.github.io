@@ -84,3 +84,9 @@ article div.highlight pre {
     overflow: auto;
     padding: 8px;
 }
+
+code:not([class]) {
+    background-color: rgb(235, 235, 235);
+    padding: 2px;
+    border-radius: 4px;
+}

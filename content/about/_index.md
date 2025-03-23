@@ -26,13 +26,13 @@ where everything has to be configured and described, rather than relying on auto
 
 ## Personal
 
-* I'm fond of bullet lists
-* Originally from the eastern parts of Switzerland (near St. Gallen)
-* BSc in Computer Science from ethz
-* Have an interest for languages; currently trying to improve my French
-* [Letterboxd](https://letterboxd.com/) enthusiast
-* More fond of video games than I care to admit
-* Love the Bernese region with the Aare and the incredible mountain views
+-   I'm fond of bullet lists
+-   Originally from the eastern parts of Switzerland (near St. Gallen)
+-   BSc in Computer Science from ethz
+-   Have an interest for languages; currently trying to improve my French
+-   [Letterboxd](https://letterboxd.com/) enthusiast
+-   More fond of video games than I care to admit
+-   Love the Bernese region with the Aare and the incredible mountain views
 
 # About this website
 
