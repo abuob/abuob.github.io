@@ -1,0 +1,24 @@
+{{ define "main" }}
+    {{ $dateTimeIso := .Date.Format "2006-01-02" }}
+    {{ $dateTimeHuman := .Date.Format "January 2, 2006" }}
+    <h1>{{ .Title }}</h1>
+    <div class="cbj-entry-description">
+        <dl>
+            {{ with .Params.website }}
+                <dt>Website</dt>
+                <dd><a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></dd>
+            {{ end }}
+            <dt>Date of Visit</dt>
+            <dd><time datetime="{{ $dateTimeIso }}">{{ $dateTimeHuman }}</time></dd>
+            {{ with .Params.rating }}
+                <dt>Rating</dt>
+                <dd>{{ . }}</dd>
+            {{ end }}
+        </dl>
+
+        {{ with .Resources.GetMatch .Params.image }}
+            <img class="cbj-entry-image" src="{{ .RelPermalink }}" alt="{{ $.Title }}" loading="lazy" />
+        {{ end }}
+    </div>
+    {{ .Content }}
+{{ end }}
