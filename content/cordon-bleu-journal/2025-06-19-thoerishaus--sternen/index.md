@@ -1,5 +1,5 @@
 ---
-title: 'Thörishaus, Restaurant Sternen (closed)'
+title: 'Thörishaus, Restaurant Sternen (final visit before closing)'
 date: 2025-06-19
 tags: []
 draft: false

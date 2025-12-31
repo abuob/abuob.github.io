@@ -18,4 +18,4 @@ Anyhow, they advertised their Cordon Bleu as a specialty of the house on the men
 The veal was cooked to medium only, not something I'm accustomed to in the context of a Cordon Bleu.
 And while it was definitely an experience worth having and I respect the choice of going for something a bit different, it wasn't quite my cup of tea.
 
-The accompanying pommes allumettes together with the home-made sauce were an absolute treat though!
+The accompanying pommes allumettes together with the amazing house-made sauce were an absolute treat though!
