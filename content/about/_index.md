@@ -26,12 +26,12 @@ where everything has to be configured and described, rather than relying on auto
 
 ## Personal
 
--   I'm fond of bullet lists
 -   Originally from the eastern parts of Switzerland (near St. Gallen)
 -   BSc in Computer Science from ethz
 -   Have an interest for languages; currently trying to improve my French
--   [Letterboxd](https://letterboxd.com/) enthusiast
 -   More fond of video games than I care to admit
+-   I like keeping track of things, e.g. [Letterboxd](https://boxd.it/6uhOx) for the movies I've watched
+-   A friend and I are fond of [Cordon Bleus]({{< relref "/cordon-bleu-journal/_index.md" >}})
 -   Love the Bernese region with the Aare and the incredible mountain views
 
 # About this website

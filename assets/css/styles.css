@@ -97,13 +97,6 @@ code:not([class]) {
     border-radius: 4px;
 }
 
-.cbj-entry-description dl {
-    display: grid;
-    grid-template-columns: max-content auto;
-    row-gap: 0.5em;
-    column-gap: 1em;
-}
-
 .cbj-entry-description dt {
     font-weight: bold;
 }
