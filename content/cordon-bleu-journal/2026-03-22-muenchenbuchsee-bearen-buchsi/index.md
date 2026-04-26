@@ -1,5 +1,5 @@
 ---
-title: 'Münchenbuchsee, Bären Buchsi'
+title: 'Münchenbuchsee, Restaurant Bären Buchsi'
 date: 2026-03-22
 tags: []
 draft: false
@@ -15,7 +15,7 @@ various types and flavors of breading and several options for stuffing.
 
 I've opted for pork with a classic breading and stuffing with local cheese and wild garlic.
 
-Once the place was served, two things stood out - the beautifully arranged salad and the small size of the Cordon Bleu.
+Once the plate was served, two things stood out - the beautifully arranged salad and the small size of the Cordon Bleu.
 The former was a delight, the latter a small disappointment given my hunger, but after all, quality is what counts, not quantity.
 And the quality was certainly there; the meat was excellently prepared, the breading hitting the perfect spot between soft and crisp,
 and the cheese wonderfully creamy. I didn't really taste much of the wild garlic though.
