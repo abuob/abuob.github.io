@@ -48,11 +48,11 @@ Someone writing a large email or message to me? Again: At the very least it took
 so unless I need to aggressively prioritize my time the least I can do is read it and answer appropriately.
 
 These contracts have been broken. Nowadays, I frequently look at paragraphs of text, and I have no clue without reading it whether it's actually worth the time or not.
-It looks good on the surface: The language is sophisticated, the document is well-formatted, but is it a genuine document or is it just LLM-output based on a three-line prompt
+It looks good on the surface: The language is sophisticated, the document is well-formatted, but is it a genuinely useful document or is it just LLM-output based on a three-line prompt
 that wasn't worth the token-usage to begin with?
 
-In the past, I got excited when someone opened a huge refactoring pull-request. Not necessarily because I was looking forward to review it or have the hard discussions of
-whether or not we should go forward with it, but because someone took the time and effort to address a pain-point they were having. Someone was motivated, fantastic!
+In the past, I got excited when someone opened a huge refactoring pull-request. Not necessarily because I was looking forward to reviewing it or having the hard discussions of
+whether or not we should go forward with it in what way, but because someone took the time and effort to address a pain-point they were having. Someone was motivated, fantastic!
 Some of the best learnings I've had in my career were based on someone (in some cases myself) trying to address something they felt was worth spending time on.
 
 Nowadays, I absolutely dread large pull requests. How much of it is genuine effort, and how much of it is just tokens burned mindlessly? Unless there are really obvious tells
@@ -91,7 +91,7 @@ I've recently read a [comment on HN](https://news.ycombinator.com/item?id=481544
 
 > \[..\] it’s quite a different experience going all Jackson Pollock with AI in your own studio on your own terms, compared to the sorry state of affairs of having 100s of Pollocks throwing paint around wildly within a corp to meet a paint quota.
 
-Where exactly we're heading, let's see. Currently, it feels like it's a very useful tool but not useful enough to justify all the hype.
+Where exactly we're heading, let's see. Currently, it feels like it's a very useful tool but not useful enough to justify all the hype and push we're currently seeing.
 To draw a parallel, it sounds a bit like the internet in the 90s before the dot-com-bust: Obviously the future but not necessarily in the timeline we currently think.
 
 To finish out with a positive note, I'm largely convinced that long-term, AI will be incredibly transformative;
