@@ -1,10 +1,16 @@
 {{ define "main" }}
+    <p>
+        My thoughts on some topics. As outlined <a href="{{ relref . "/blog/2024-09-10-why-have-a-website.md" }}">here</a>, I'm primarily
+        writing for myself. Therefore, anything you'll read here is written by me without the use of LLMs unless otherwise declared.
+    </p>
     {{ range .Pages.ByPublishDate.Reverse }}
-        <h1 class="list-page--item-title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h1>
-        {{ $dateTimeIso := .Date.Format "2006-01-02" }}
-        {{ $dateTimeHuman := .Date.Format "January 2, 2006" }}
-        <time datetime="{{ $dateTimeIso }}">{{ $dateTimeHuman }}</time>
+        <div class="list-page--item-container">
+            {{ $dateTimeIso := .Date.Format "2006-01-02" }}
+            {{ $dateTimeHuman := .Date.Format "January 2, 2006" }}
+            <time datetime="{{ $dateTimeIso }}">{{ $dateTimeHuman }}</time>
+            <h1 class="list-page--item-title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h1>
+        </div>
     {{ end }}
 {{ end }}
