@@ -78,8 +78,8 @@ One of the big benefits of having to do the "hard work" oneself is that one spen
 If one can hit the sweet spot and get the abstractions _just_ right, that saves a lot of time down the road (and feels absolutely incredible).
 Now that we have a tool to just generate code, why think about it much? Let's just generate some more!
 Having the experience of getting abstractions wrong and living with the pain of having to write/debug/extend code in cumbersome fashion is not something the LLMs can have;
-as writing code is no pain for them. As a matter of fact, the market-incentives are orthogonally aligned:
-The more code generation that is needed, the less it becomes manageable by humans, which leads to more need for LLMs.
+as writing code is no pain for them. The market incentives might lead into the opposite direction:
+The more code is generated with bad abstractions, the less it becomes manageable by humans, which leads to more need for LLMs.
 
 ## Final thoughts
 
