@@ -1,5 +1,5 @@
 ---
-title: 'Rüegsauschachen, Schnitzehouse Brünnli'
+title: 'Rüegsauschachen, Schnitzelhouse Brünnli'
 date: 2026-07-17
 tags: []
 draft: false
